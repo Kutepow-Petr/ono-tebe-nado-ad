@@ -1,1 +1,207 @@
-/* место для вашего кода */
+:root {
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-gray: #363636;
+
+  --font-size-default: 20px;
+  --line-height-default: 120%;
+  --font-size-accent: 22px;
+  --font-size-secondary: 18px;
+  --line-height-secondary: 135%;
+
+  --spacing-default: 50px;
+  --gap-default: 20px;
+  --button-height: 50px;
+}
+
+* {
+  transition-duration: 0.2s;
+}
+
+body {
+  color: var(--color-dark);
+  font-family: Raleway, sans-serif;
+  font-size: var(--font-size-default);
+  font-weight: 500;
+  line-height: var(--line-height-default);
+  background-color: var(--color-light);
+}
+
+h1 {
+  color: var(--color-light);
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 135%;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+address {
+  font-style: normal;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: var(--color-dark);
+  font-size: var(--font-size-secondary);
+  text-transform: lowercase;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+a:hover {
+  border-bottom: none;
+}
+
+button {
+  width: 256px;
+  height: var(--button-height);
+  color: var(--color-light);
+  font-size: var(--font-size-accent);
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid var(--color-light);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 25%);
+}
+
+.accent-span {
+  display: block;
+}
+
+.text-center {
+  align-self: center;
+}
+
+.text-right {
+  align-self: end;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 60%);
+}
+
+.contact-information {
+  width: 240px;
+}
+
+
+
+/*СТИЛИ HEADER-А*/
+
+.header {
+  min-height: 293px;
+  padding-inline: var(--spacing-default);
+  display: grid;
+  grid-template-columns: 1fr 150px 1fr;
+  align-items: center;
+}
+
+.header__navigation-list {
+  display: flex;
+  column-gap: 34px;
+}
+
+.navigation-list-item {
+  position: relative;
+}
+
+.navigation-list-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  width: 6px;
+  aspect-ratio: 1;
+  border: 1px solid var(--color-dark);
+  border-radius: 50%;
+}
+
+.navigation-list-item.is-current a {
+  border-bottom: none;
+}
+
+.navigation-list-item.is-current::before {
+  content: none;
+}
+
+.header .contact-information {
+  justify-self: end;
+}
+
+
+
+/*СТИЛИ ОСНОВНОГО КОНТЕНТА*/
+
+/*Стиль обложки*/
+
+.cover {
+  position: relative;
+  min-height: 757px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background: var(--color-gray) url("../images/cover.jpg") no-repeat center/cover;
+}
+
+.cover__title {
+  margin: 0 calc(var(--spacing-default) - 0.3em)
+    0 var(--spacing-default);
+  display: flex;
+  flex-direction: column;
+  place-content: start center;
+}
+
+.cover__content {
+  margin-inline: var(--spacing-default);
+  margin-bottom: var(--spacing-default);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cover__title, .cover__content {
+  z-index: 1;
+}
+
+.cover__description {
+  display: block;
+  width: 637px;
+  text-align-last: justify;
+  letter-spacing: 1px;
+  color: var(--color-light);
+  font-size: var(--font-size-accent);
+  text-transform: uppercase;
+}
+
+
+
+.card-title a {
+  color: var(--color-light);
+  font-size: var(--font-size-accent);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+
+/*СТИЛИ FOOTER-А*/
+
+.footer {
+  min-height: 180px;
+  padding-inline: var(--spacing-default);
+}
