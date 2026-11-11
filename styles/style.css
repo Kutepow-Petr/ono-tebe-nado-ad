@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Regular.woff") format("woff"),
+  url("../fonts/Raleway-Regular.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Bold.woff") format("woff"),
+  url("../fonts/Raleway-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
 :root {
   --color-light: #ffffff;
   --color-dark: #000000;
@@ -135,6 +149,10 @@ button:hover {
 
 .header__navigation .navigation-list-item.is-current::before {
   content: none;
+}
+
+.header__logo {
+  border-bottom: none;
 }
 
 .header .contact-information {
