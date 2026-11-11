@@ -186,10 +186,11 @@ button:hover {
 /*Стили секции с лотами*/
 
 .lots {
-  margin: 180px 0 135px 0;
+  margin-block: 194px 148px;
+  margin-inline: calc(var(--spacing-small) / 2);
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 36px;
   align-items: start;
 }
 
@@ -200,7 +201,7 @@ button:hover {
 .lots__cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 25px;
 
 }
 
@@ -261,8 +262,10 @@ button:hover {
   justify-content: start;
   align-items: center;
   column-gap: 72px;
-  margin-inline: var(--spacing-default);
-  margin-bottom: 180px;
+  margin-inline:
+    calc(var(--spacing-default) + var(--spacing-small) / 2)
+    var(--spacing-default);
+  margin-bottom: 190px;
 }
 
 .about__logo-wrapper {
